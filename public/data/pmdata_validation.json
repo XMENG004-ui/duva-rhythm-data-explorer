@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-08-26T17:54:44",
+  "source": "PMData raw directory (local path omitted)",
+  "participantCount": 16,
+  "totals": {
+    "validStageNights": 1844,
+    "mainStageRecords": 1905,
+    "exerciseRecords": 2440,
+    "foodReports": 1569,
+    "wellnessReports": 1747,
+    "exerciseMatchedNights": 1218,
+    "foodMatchedNights": 1144,
+    "completeContextNights": 756,
+    "sleepHeartRateNights": 1841,
+    "heartRateSettlingNights": 1840,
+    "first90SleepStructureNights": 1844,
+    "restingHeartRateNights": 1532
+  },
+  "participantsWith30CompleteContextNights": [
+    "p01",
+    "p02",
+    "p04",
+    "p05",
+    "p06",
+    "p07",
+    "p08",
+    "p10",
+    "p11",
+    "p14"
+  ],
+  "specialHandling": [
+    {
+      "participant": "p12",
+      "reason": "fewer_than_4_valid_stage_nights"
+    },
+    {
+      "participant": "p15",
+      "reason": "food_context_unavailable"
+    }
+  ],
+  "contextRules": {
+    "exerciseDay": "exercise starting within 18 hours before primary sleep",
+    "eveningExercise": "at least 15 minutes ending within 6 hours before primary sleep",
+    "foodAnchor": "calendar day preceding an after-midnight sleep start, otherwise sleep-start date",
+    "associationBoundary": "context never contributes to Pattern Emergence",
+    "physiologyFeatures": "sleep median HR, sleep 10th-percentile HR, first-90-minute HR settling time and daily resting HR; normalized within participant window before Pattern distance",
+    "first90Structure": "Fitbit sleep-stage transitions and brief wake events; this is not a body-position measurement",
+    "unsupportedSignals": "PMData contains no body-position/IMU or environmental-noise stream; these fields remain unavailable rather than inferred"
+  }
+}
